@@ -1,0 +1,44 @@
+html, body {
+    margin: 200;
+    padding: 50;
+}  /*расположение слайдера на странице*/
+ 
+#viewport { /*размер картинок в слайдере*/
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+}
+ 
+.slider { /*переходы картинок слайдера*/
+    position: relative;
+    transition: 500ms;
+    width: calc(100% * 5);
+    height: 450px; 
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+}
+ 
+.slide {
+    width: 100%;
+    height: 450px; /*утвержденный размер слайда*/
+}
+ 
+.slide img { /*масштабирование картинок слайдера*/
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: 0;
+}
+ 
+#viewSlider {
+    width: calc(30px * 5);
+    display: flex;
+    justify-content: space-between; /*вид слайдера на странице*/
+}
+ 
+.viewSlide {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(82, 72, 72, 0.575);
+} /*цвет указателя номера слайдера*/

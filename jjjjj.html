@@ -1,0 +1,55 @@
+<!Doctype html>
+<head>
+  <title>Исключение
+  </title>
+  <script>
+    const fact=(n) => {
+      let ex;
+      if (isNaN(n)) {
+      ex = new TypeError();
+      ex.message="Введено не число";
+      throw ex;
+      }
+      if (n<0){
+        ex = new RangeError();
+        ex.message="Отрицательное число";
+        throw ex;
+      }
+      if (n==0 || n==1) return 1;
+      else try {
+        return n*fact(n-1);
+      }
+      catch(exx) {
+        ex = new RangeError();
+        ex.message="Переполнение стека - слишком большое число";
+        throw ex;
+      }
+      }
+
+      document.write("<h1>Попытка вычислить факториал</h1>");
+      let n=window.prompt("Введите целое неотрицательное число",0);
+      try {
+        n = parseInt(n);
+        document.write("Факториал = "+fact(n));
+      }
+     
+      catch(ex){
+        if (ex.name=="ReferenceError") {
+        document.write("Функция не объявлена");
+        }
+        else if (ex.nane =="RangeError") {
+          document.write('Неправильное число')
+        }
+        else{
+          document.write("Возникла ошибка: "+ex.message);
+        }
+
+      }
+      finally{
+        document.write("</p><p>продолжаем работать</p>");
+      }
+  </script>
+</head>
+<body>
+</body>
+</html>

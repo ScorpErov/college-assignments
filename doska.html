@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            line-height: 50%;
+        }
+    </style>
+    <script>
+        let a = window.prompt("Введи число");
+        a = parseInt(a);
+        if (a >= 1) {
+            if (a == 1) {
+                for (let i = 0; i < 8; i++) {
+                    if (i % 2 == 0) {
+                        document.write("_*_*_*_* </br>");
+                    } else {
+                        document.write("*_*_*_* </br>");
+                    }
+                }
+            } else {
+                for (let y = 0; y < 8; y++) {
+                    if (y % 2 == 0) {
+                        for (let f = 0; f < a; f++) {
+                            for (let j = 0; j < 4; j++) {
+                                for (let h = 0; h < a * 2; h++) {
+                                    document.write("&nbsp");
+                                }
+                                for (let u = 0; u < a; u++) {
+                                    document.write("*");
+                                }
+
+                            }
+                            document.write("</br>");
+                        }
+                    } else {
+                        for (let q = 0; q < a; q++) {
+                            for (let n = 0; n < 4; n++) {
+                                for (let h = 0; h < a; h++) {
+                                    document.write("*");
+                                }
+                                for (let v = 0; v < a * 2; v++) {
+                                    document.write("&nbsp");
+                                }
+                            }
+                            document.write("</br>");
+                        }
+
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

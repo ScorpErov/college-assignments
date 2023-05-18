@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nrand= (a,b) => Math.floor(Math.random()*(b-a)+a);
+        let a = nrand(48, 57);
+        let b = nrand(65, 90);
+        let c = nrand(97, 122);
+        function* generator () {
+            while (true) {
+                let u = nrand(0,3);
+                /*switch(u){
+                    case '0':
+                    yield String.fromCharCode(nrand(48,57));
+                    break; 
+
+                    case '1':
+                    yield String.fromCharCode(nrand(65, 90));
+                    break;
+
+                    case '2':
+                    yield String.fromCharCode(nrand(97, 122));
+                    break;
+                }*/
+                 if (u==0) {
+                     yield String.fromCharCode(nrand(48,57));
+                 } else {if (u==1) {
+                     yield String.fromCharCode(nrand(65, 90));
+                 } else {
+                     yield String.fromCharCode(nrand(97, 122));
+                 }}
+            }
+        }
+        let gen = generator();
+        let number=window.prompt('Длинна');
+        number=parseInt(number);
+        let s='';
+        for (let i=0;i<number;i++) {
+            g=gen.next();
+            s+=gen.next(number).value;
+        }
+        document.write('<p>'+s+'</p>');
+    </script>
+</body>
+</html>

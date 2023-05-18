@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Сладер</title>
+    <link rel="stylesheet" href="./style.css"> <!--ссылка на файл css-->
+    <link rel="stylesheet" href="./ggg.php">
+</head>
+<form action="send.php" method="post">
+    <label>Name</label>
+    <input type="text" name="name" required><br>
+    <label>Email</label>
+    <input type="email" name="email" required><br>
+    <label>Message</label>
+    <textarea name="message" required></textarea><br>
+
+    <p><input name="file" type="file"><br>
+    </p>
+    <p><input name="Znach" type="radio" value="Sani">Саня</p>
+    <p><input name="Znach" type="radio" value="NeSani">Не Саня</p>
+    <p><input name="Znach" type="radio" value="Shurik">Шурик</p>
+    <input type="submit" name="submit" value="Send">
+  </form>
+</body> 
+</html>

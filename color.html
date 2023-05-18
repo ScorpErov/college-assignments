@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            div{
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+            }
+    </style>
+</head>
+<body>
+    <input type="range" name="r" id="r" min="0" max="255" value="125" onchange="color();"> <br>
+    <div id="divOd"></div>
+    <input type="range" name="g" id="g" min="0" max="255" value="125" onchange="color();"> <br>
+    <div id="divDv"></div>
+    <input type="range" name="b" id="b" min="0" max="255" value="125" onchange="color();"> <br>
+    <div id="divTr"></div>
+    <br>
+    <div id="div"></div>
+    <script>
+        function color(){
+            let r = document.getElementById('r').value;
+            document.getElementById('divOd').style.backgroundColor = "rgb("+r+",0,0)";
+            let g = document.getElementById('g').value;
+            document.getElementById('divDv').style.backgroundColor = "rgb(0,"+g+",0)";
+            let b = document.getElementById('b').value;
+            document.getElementById('divTr').style.backgroundColor = "rgb(0,0,"+b+")";
+
+            document.getElementById('div').style.backgroundColor = "rgb("+r+","+g+","+b+")";
+        }
+        
+    </script>
+</body>
+</html>

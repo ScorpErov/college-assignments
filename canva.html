@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Вариант 2</h1>
+    <canvas width="500" height="500" id="canvas"></canvas>
+    <script>
+        let ctx = document.querySelector('canvas').getContext('2d');
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = "1px";
+        ctx.beginPath();
+        ctx.moveTo(250,0);
+        ctx.lineTo(250,500);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(0,250);
+        ctx.lineTo(500,250);
+        ctx.stroke();
+        ctx.strokeStyle = "black";
+        ctx.strokeText("Y",255,10,10);
+        ctx.strokeText("X",490,245,10);
+        ctx.strokeStyle = "red";
+        ctx.beginPath();
+        let x = -25;
+        let y = 0;
+        while (x!=25) {
+            y = Math.sin(x**2);
+            ctx.lineTo(x*10+250,-1*y*10+250);
+            x++;
+        }
+        ctx.stroke();
+    </script>
+</body>
+</html>

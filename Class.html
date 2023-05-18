@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class MyObj {
+            #n;
+            #d;
+            #f;
+            #i;
+            #u;
+            constructor (Nazv,Data,Familia,Kolich,Ocenk) {
+                this.#n=Nazv;
+                this.#d=Data;
+                this.#f=Familia;
+                this.#i=Kolich;
+                this.#u=Ocenk;
+            }
+            set Nazv(Nazv){
+                this.#n=Nazv;
+            }
+            set Data(Data){
+                this.#d=Data;
+            }
+            set Familia(Familia){
+                this.#f=Familia;
+            }
+            set Kolich(Kolich){
+                this.#i=Kolich;
+            }
+            set Ocenk(Ocenk){
+                this.#u=Ocenk;
+            }
+
+            get Data(){
+                return this.#d;
+            }
+            get Familia(){
+                return this.#f;
+            }
+            get Kolich(){
+                return this.#i;
+            }
+            get Ocenk(){
+                return this.#u;
+            }
+            get Nazv(){
+                return this.#n;
+            }
+            MyPrompt() {
+                this.#n=window.prompt("Название предмета");
+                this.#d=window.prompt("Дата экзамена");
+                this.#f=window.prompt("Фамилия принимающего");
+                this.#i=window.prompt("Колличество выставленных оценок");
+                this.#u=window.prompt("Оценки");
+            }
+            Vivod() {
+                return "Название предмета"+this.#n+"<br>Дата экзамена"+this.#d+"<br>Фамилия принимающего"+this.#f+"<br>Колличество выставленных оценок"+this.#i+"<br>Оценки"+this.#u;
+            }
+        }
+        class MassObj {
+             #count;
+             #arr;
+
+             constructor(count,arr){
+                this.#count=0;
+                this.#arr=new Array();
+             }
+             
+            }
+        let a = new MyObj(0,0,0,0,0);
+        a.MyPrompt();
+        document.write("<h1>"+a.Vivod()+"</h1>");
+        
+    </script>
+</body>
+</html>
